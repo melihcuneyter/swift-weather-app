@@ -17,8 +17,7 @@
 		E5D0CCFD26BBDC270052E852 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0CCFC26BBDC270052E852 /* CustomPageViewController.swift */; };
 		E5D0CD0626BBEC710052E852 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0CD0526BBEC710052E852 /* WeatherModel.swift */; };
 		E5D0CD0926BBECAA0052E852 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0CD0826BBECAA0052E852 /* Services.swift */; };
-		E5D0CD0E26BC21280052E852 /* AddAnotherLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0CD0D26BC21280052E852 /* AddAnotherLocationViewController.swift */; };
-		E5D0CD1226BC2A5F0052E852 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0CD1126BC2A5F0052E852 /* AddLocationViewController.swift */; };
+		E5D0CD1226BC2A5F0052E852 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0CD1126BC2A5F0052E852 /* LocationListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +33,7 @@
 		E5D0CCFC26BBDC270052E852 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		E5D0CD0526BBEC710052E852 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		E5D0CD0826BBECAA0052E852 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		E5D0CD0D26BC21280052E852 /* AddAnotherLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnotherLocationViewController.swift; sourceTree = "<group>"; };
-		E5D0CD1126BC2A5F0052E852 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		E5D0CD1126BC2A5F0052E852 /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +70,6 @@
 				E5D0CD0A26BBECBD0052E852 /* Services */,
 				E5D0CD0726BBEC8B0052E852 /* Model */,
 				E5D0CCE426BBDAAC0052E852 /* AppDelegate.swift */,
-				E5D0CD0D26BC21280052E852 /* AddAnotherLocationViewController.swift */,
 				E5D0CCE626BBDAAC0052E852 /* SceneDelegate.swift */,
 				E5D0CCEA26BBDAAC0052E852 /* Main.storyboard */,
 				E5D0CCED26BBDAAF0052E852 /* Assets.xcassets */,
@@ -88,7 +85,7 @@
 				E5D0CCE826BBDAAC0052E852 /* ViewController.swift */,
 				E5D0CCF826BBDB5B0052E852 /* DataViewController.swift */,
 				E5D0CCFC26BBDC270052E852 /* CustomPageViewController.swift */,
-				E5D0CD1126BC2A5F0052E852 /* AddLocationViewController.swift */,
+				E5D0CD1126BC2A5F0052E852 /* LocationListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -182,8 +179,7 @@
 				E5D0CCF926BBDB5B0052E852 /* DataViewController.swift in Sources */,
 				E5D0CCE926BBDAAC0052E852 /* ViewController.swift in Sources */,
 				E5D0CCE526BBDAAC0052E852 /* AppDelegate.swift in Sources */,
-				E5D0CD0E26BC21280052E852 /* AddAnotherLocationViewController.swift in Sources */,
-				E5D0CD1226BC2A5F0052E852 /* AddLocationViewController.swift in Sources */,
+				E5D0CD1226BC2A5F0052E852 /* LocationListViewController.swift in Sources */,
 				E5D0CD0926BBECAA0052E852 /* Services.swift in Sources */,
 				E5D0CCFD26BBDC270052E852 /* CustomPageViewController.swift in Sources */,
 				E5D0CD0626BBEC710052E852 /* WeatherModel.swift in Sources */,
@@ -337,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 597MRPLSQU;
 				INFOPLIST_FILE = WeatherAppFull/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.melihcuneyter.WeatherAppFull;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 597MRPLSQU;
 				INFOPLIST_FILE = WeatherAppFull/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.melihcuneyter.WeatherAppFull;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
