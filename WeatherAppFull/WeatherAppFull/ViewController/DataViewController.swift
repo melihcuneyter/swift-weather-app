@@ -7,8 +7,7 @@
 
 import UIKit
 
-class DataViewController: UIViewController {
-    
+class DataViewController: UIViewController {    
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -18,66 +17,52 @@ class DataViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
-    
     var index: Int?
     var displayText: String?
-    
-    var location = [String]()
-    var temperature : Double?
-    var weatherDescription : String?
-    var minTemp : Double?
-    var maxTemp : Double?
-    var humidity : Int?
-    var pressure : Int?
-    var wind : String?
+    var locationNames = [String]()
+    var temperature: Double?
+    var weatherDescription: String?
+    var minTemp: Double?
+    var maxTemp: Double?
+    var humidity: Int?
+    var pressure: Int?
+    var wind: String?
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        location = UserDefaults.standard.array(forKey: "newLocation") as? [String] ?? ["Veri Yok"]
-        UserDefaults.standard.synchronize()
-
+        locationNames = UserDefaults.standard.array(forKey: "newLocation") as? [String] ?? ["Veri Yok"]
         getURLandShow()
-
-        view.backgroundColor = UIColor.lightGray
-        
-        locationLabel.layer.cornerRadius = 10
-        locationLabel.layer.borderWidth = 1
-        
-        tempLabel.layer.cornerRadius = 10
-        tempLabel.layer.borderWidth = 1
-        
-        descriptionLabel.layer.cornerRadius = 10
-        descriptionLabel.layer.borderWidth = 1
-        
-        minTempLabel.layer.cornerRadius = 10
-        minTempLabel.layer.borderWidth = 1
-        
-        maxTempLabel.layer.cornerRadius = 10
-        maxTempLabel.layer.borderWidth = 1
-        
-        humidityLabel.layer.cornerRadius = 10
-        humidityLabel.layer.borderWidth = 1
-        
-        pressureLabel.layer.cornerRadius = 10
-        pressureLabel.layer.borderWidth = 1
-        
-        windLabel.layer.cornerRadius = 10
-        windLabel.layer.borderWidth = 1
-        
-        
+        labelStyle()
+        view.backgroundColor = .lightGray
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        location = UserDefaults.standard.array(forKey: "newLocation") as? [String] ?? ["Veri Yok"]
-        UserDefaults.standard.set(location, forKey: "newLocation")
-        UserDefaults.standard.synchronize()
+        locationNames = UserDefaults.standard.array(forKey: "newLocation") as? [String] ?? ["Veri Yok"]
+        UserDefaults.standard.set(locationNames, forKey: "newLocation")
+    }
+    
+    func labelStyle() {
+        locationLabel.layer.cornerRadius = 10
+        locationLabel.layer.borderWidth = 1
+        tempLabel.layer.cornerRadius = 10
+        tempLabel.layer.borderWidth = 1
+        descriptionLabel.layer.cornerRadius = 10
+        descriptionLabel.layer.borderWidth = 1
+        minTempLabel.layer.cornerRadius = 10
+        minTempLabel.layer.borderWidth = 1
+        maxTempLabel.layer.cornerRadius = 10
+        maxTempLabel.layer.borderWidth = 1
+        humidityLabel.layer.cornerRadius = 10
+        humidityLabel.layer.borderWidth = 1
+        pressureLabel.layer.cornerRadius = 10
+        pressureLabel.layer.borderWidth = 1
+        windLabel.layer.cornerRadius = 10
+        windLabel.layer.borderWidth = 1
     }
     
     func getURLandShow () {
-        
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(location[index!])&appid=d636e8f13d9a778c0e30117188706fb2&units=metric")
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(locationNames[index!])&appid=d636e8f13d9a778c0e30117188706fb2&units=metric")
         Webservices().downloadServices(url: url!) { (weathers) in
             if let weathers = weathers {
             print(weathers)
@@ -107,5 +92,4 @@ class DataViewController: UIViewController {
             }
         }
     }
-
 }

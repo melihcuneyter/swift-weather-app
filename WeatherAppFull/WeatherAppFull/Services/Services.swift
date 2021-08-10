@@ -9,7 +9,6 @@ import Foundation
 
 class Webservices {
     func downloadServices(url: URL, completion: @escaping ((RootWeather)?) ->()) {
-        
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -23,8 +22,5 @@ class Webservices {
                 }
             }
         }.resume()
-    
     }
-    
-   
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kh1-ee-TeL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="1034.7826086956522" y="118.52678571428571"/>
         </scene>
-        <!--Add Location View Controller-->
+        <!--Location List View Controller-->
         <scene sceneID="TUN-dx-z1k">
             <objects>
-                <viewController storyboardIdentifier="AddLocationViewController" id="d4K-s0-cda" customClass="AddLocationViewController" customModule="WeatherAppFull" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationListViewController" id="d4K-s0-cda" customClass="LocationListViewController" customModule="WeatherAppFull" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="emd-e6-IkY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
